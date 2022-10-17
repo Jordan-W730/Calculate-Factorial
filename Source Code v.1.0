@@ -1,33 +1,36 @@
-#include <bits/stdc++.h>
-using namespace.std
+#include <iostream>
+using namespace std;
 
+int factorial(int x) 
 
-// declare function to determine factorial value of some integer n
+{
 
-int fact(n) {
+    if (x == 1) {
 
-  if(n == 1) {
-  
-    // returns factn (the int value we are assigning the factorial of n to) when n = 1 (the end of the factorial multiplication
-  
-    return n;
-    
-  } else {
-  
-    // multiplies n*(n-1)*(n-2)*...*(1)
-    
-    factn = n * fact(n-1)
-    
-  }
+        // returns factn (the int value we are assigning the factorial of n to) when n = 1 (the end of the factorial multiplication
+
+        return x;
+
+    } else {
+
+        // multiplies n*(n-1)*(n-2)*...*(1)
+
+        int factn = x * factorial(x - 1);
+
+        return factn;
+
+    }
 
 }
 
-int main() {
+int main() 
 
-  int n;
-  cin >> n;
-  fact(n);
+{
 
-  return 0;
-  
+    int n; cin >> n;
+
+    cout << factorial(n);
+
+    return 0;
+
 }
